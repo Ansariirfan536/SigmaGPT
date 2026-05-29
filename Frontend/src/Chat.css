@@ -1,0 +1,285 @@
+/* --- Core Layout Containers --- */
+.chat-window-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #131314;
+    overflow: hidden;
+    position: relative;
+}
+
+.chats-container-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); 
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll !important; 
+    overflow-x: hidden !important; 
+}
+
+.chats {
+    width: 100% !important; 
+    max-width: 100% !important; 
+    padding: 2rem 5% 140px 5% !important; 
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    box-sizing: border-box;
+}
+
+.chats h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- Input Area & Buttons --- */
+.input-panel-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 768px;
+    padding: 0 20px 24px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #131314;
+    z-index: 10;
+}
+
+.input-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e20;
+    border-radius: 32px;
+    padding: 10px 20px;
+    gap: 12px;
+    border: 1px solid transparent;
+}
+
+.input-bar input[type="text"] {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #e3e3e3;
+    font-size: 1rem;
+}
+
+/* --- User Chat Layouts --- */
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.userMessageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    max-width: 70%;
+}
+
+.userMessage {
+    background-color: #2f2f2f;
+    color: #e3e3e3;
+    padding: 12px 24px;
+    border-radius: 22px;
+    width: fit-content;
+    word-break: break-word;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.chat-inline-preview {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-preview-badge {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    background-color: #1e1e1e;
+    border: 1px solid #3c4043;
+    border-radius: 12px;
+    padding: 4px;
+    width: fit-content;
+}
+
+.image-preview-badge img { 
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.image-preview-badge button {
+    position: absolute; 
+    top: -6px; 
+    right: -6px; 
+    background: #ea4335; 
+    color: #fff;
+    border: none; 
+    border-radius: 50%; 
+    width: 18px; 
+    height: 18px; 
+    cursor: pointer; 
+    font-size: 10px;
+}
+
+/* --- Model (AI) Chat Layouts --- */
+.gptDiv {
+    width: 100%;
+    max-width: 100% !important;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+}
+
+.markdownContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.gptDiv p {
+    width: 100%;
+    word-break: break-word;
+    white-space: pre-wrap;
+    margin: 0 0 12px 0;
+}
+
+.markdownContainer h1, .markdownContainer h2, .markdownContainer h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 24px 0 12px 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.markdownContainer h1 { font-size: 1.6rem; }
+.markdownContainer h2 { font-size: 1.3rem; }
+.markdownContainer h3 { font-size: 1.15rem; }
+
+/* --- AI Streaming & Formatting Animations --- */
+.animation-streaming p, 
+.animation-streaming li, 
+.animation-streaming pre {
+    animation: fadeInText 0.15s ease-out forwards;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0.6; transform: translateY(1px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.typing-cursor {
+    color: #38bdf8;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 6px;
+    animation: blinkCursor 0.8s infinite steps(2);
+    vertical-align: middle;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Structured Code Blocks --- */
+.pureCodeBlockWrapper {
+    margin: 18px 0;
+    border-radius: 8px;
+    overflow: hidden !important; 
+    border: 1px solid #2d2d2d; 
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    display: block;
+}
+
+.pureCodeBlockWrapper pre,
+.pureCodeBlockWrapper code {
+    white-space: pre !important; 
+    word-break: normal !important;
+    word-wrap: normal !important;
+}
+
+.pureCodeHeader {
+    background-color: #2d2d2d !important; 
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    color: #9ca3af; 
+    border-bottom: 1px solid #1e1e1e;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+}
+
+.inlineCode {
+    font-family: monospace !important;
+    background-color: #2e2e2e !important; 
+    color: #f87171 !important; 
+    padding: 3px 6px !important;
+    border-radius: 6px !important;
+    font-size: 0.88rem !important;
+}
+
+/* --- Voice Input Microphone Pulse --- */
+.pulse-red {
+    color: #ea4335 !important;
+    animation: micGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes micGlow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); color: #ff5c4d; }
+    100% { transform: scale(1); }
+}
+
+/* --- 🔥 Dynamic AI Animated Loader Spinner --- */
+.loader-flex-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.backend-loading-wrapper {
+    animation: fadeInText 0.3s ease-out forwards;
+}
+
+.ai-loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(56, 189, 248, 0.2); 
+    border-top-color: #38bdf8; 
+    border-radius: 50%;
+    animation: spinCircle 0.8s linear infinite; 
+}
+
+.loading-text {
+    font-size: 0.95rem;
+    color: #9ca3af; 
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+@keyframes spinCircle {
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,31 @@
+# Backend Ignores
+Backend/.env
+Backend/node_modules/
+
+# Frontend Logs
+Frontend/logs
+Frontend/*.log
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/pnpm-debug.log*
+Frontend/lerna-debug.log*
+
+# Frontend Dependency directories
+Frontend/node_modules/
+
+# Frontend Build outputs
+Frontend/dist
+Frontend/dist-ssr
+Frontend/*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

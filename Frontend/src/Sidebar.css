@@ -1,0 +1,141 @@
+.sidebar {
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 320px;
+    min-width: 320px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.sidebar-top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ececec;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.new-chat-icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: #e3e3e3;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.history {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.history li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px 35px 10px 12px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    color: #ececf1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.thread-title-span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+}
+
+.history li:hover, .highlighted {
+    background-color: rgba(180, 180, 180, 0.05);
+}
+
+.fa-trash {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 13px;
+    transition: opacity 0.2s;
+}
+
+.history li:hover .fa-trash {
+    opacity: 1;
+    color: #fff;
+}
+
+.fa-trash:hover {
+    color: #f87171 !important;
+}
+
+.sign {
+    padding: 14px;
+    margin: 10px;
+    border-top: solid 0.25px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    box-sizing: border-box;
+}
+
+.by-irfan-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* 🌟 ROSE RED PREMIUM AVATAR STYLES */
+.profile-avatar-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 36px; 
+    height: 36px;
+    border-radius: 50%;
+    background: #1e1e24; 
+    border: 2px solid #ff4a5a; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.profile-avatar-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 74, 90, 0.35); 
+}
+
+.avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.history::-webkit-scrollbar { width: 3px; }
+.history::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.05); }

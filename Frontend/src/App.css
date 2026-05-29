@@ -1,0 +1,11 @@
+/* Parent Flex Layout Setup */
+.app-container {
+    display: flex !important;
+    flex-direction: row !important; /* Sidebar left me, Chat Window right me */
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #212121;
+}
