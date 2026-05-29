@@ -170,3 +170,10 @@ input[type="text"]:focus {
     align-items: center;
     justify-content: center;
 }
+.danger{
+    color: #f87171;
+}
+.owner{
+    background-color: black;
+    color: blue
+}
