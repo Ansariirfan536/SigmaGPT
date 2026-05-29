@@ -207,6 +207,9 @@ function ChatWindow() {
                 
                 <p className="info">
                     SigmaGPT can make mistakes. Check important info. See Cookie Preferences.
+                    <p className="danger">"Notice: To ensure fair usage under our current free tier, we kindly ask users to
+                         limit the frequency and length of their chats. 
+                        Short and meaningful queries work best! Thank you for understanding."--<span className="owner"> BY IRFAN ANSARI</span> </p>
                 </p>
             </div>
         </div>
