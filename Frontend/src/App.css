@@ -2,10 +2,24 @@
 .app-container {
     display: flex !important;
     flex-direction: row !important; /* Sidebar left me, Chat Window right me */
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
+    width: 100%;
+    min-height: 100vh !important;
     margin: 0 !important;
     padding: 0 !important;
     background-color: #212121;
+}
+
+@media (max-width: 1024px) {
+    .app-container {
+        flex-direction: column !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .app-container {
+        padding: 0 !important;
+    }
 }
