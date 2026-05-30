@@ -216,3 +216,9 @@ input[type="text"]:focus {
         padding: 0 12px;
     }
 }
+.danger{
+    background-color: red;
+}
+.owner{
+    background-color: blue;
+}
